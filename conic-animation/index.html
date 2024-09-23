@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>扇形アニメーション</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="script.js" type="text/javascript" defer></script>
+    <style class="editable"></style>
+</head>
+<body>
+    <section class="positioning preview"></section>
+    <textarea class="positioning playable playable-html" style="height: 100px;">
+<h2>扇形アニメーション</h2>
+
+<div class="conic"></div>
+</textarea>
+    <textarea class="positioning playable playable-css" style="height: 160px;">
+div.conic {
+    position: relative;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+div.conic::before {
+    content: "";
+    position: absolute;
+    inset: -25%;
+    background: repeating-conic-gradient(
+        rgba(255, 255, 0, 0.5) 0deg 10deg,
+        rgba(0, 255, 255, 0.5) 10deg 20deg);
+    z-index: -1;
+    animation: rotation 5s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+</textarea>
+    <div class="positioning playable-buttons">
+        <input type="button" id="reset" value="リセット" />
+    </div>
+</body>
+</html>

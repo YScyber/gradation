@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>線形アニメーション</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="script.js" type="text/javascript" defer></script>
+    <style class="editable"></style>
+</head>
+<body>
+    <section class="positioning preview"></section>
+    <textarea class="positioning playable playable-html" style="height: 100px;">
+<h2>線形アニメーション</h2>
+
+<div class="linear"></div>
+</textarea>
+    <textarea class="positioning playable playable-css" style="height: 160px;">
+div.linear {
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: linear-gradient(
+        -45deg,
+        rgba(139, 0, 118, 0.5) 25%,
+        rgb(139, 0, 118, 0.1) 25%,
+        rgb(139, 0, 118, 0.1) 50%,
+        rgb(139, 0, 118, 0.5) 50%,
+        rgb(139, 0, 118, 0.5) 75%,
+        rgb(139, 0, 118, 0.1) 75%,
+        rgb(139, 0, 118, 0.1));
+    background-size: 20px 20px;
+    animation: stripe 0.8s infinite linear;
+}
+
+@keyframes stripe {
+    from {
+        background-position-x: 0;
+    }
+    to {
+        background-position-x: -40px;
+    }
+}
+</textarea>
+    <div class="positioning playable-buttons">
+        <input type="button" id="reset" value="リセット" />
+    </div>
+</body>
+</html>

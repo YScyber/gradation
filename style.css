@@ -1,0 +1,36 @@
+@charset "UTF-8";
+html {
+    font: 1em/1.5 sans-serif;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+    max-width: 980px;
+    background-color: #000;
+    color: #f8f8f8;
+}
+
+header,
+aside {
+    margin-bottom: 20px;
+    padding: 1em;
+    border-bottom: 10px double #f8f8f8;
+}
+
+header h1,
+aside h2 {
+    text-align: center;
+}
+
+div.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+div.wrapper iframe {
+    max-width: 100%;
+    background-color: #f8f8f8;
+}
