@@ -138,4 +138,4 @@ div.box::before {
 ※ 日本時間 2024/10/16 にリファクタリングしました。
 <br><br>
 
-[完成ページへ](https://yscyber.github.io/css-gradation/ "https://yscyber.github.io/css-gradation/")
+[完成ページへ](https://yscyber.github.io/gradation/ "https://yscyber.github.io/gradation/")
