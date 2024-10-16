@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>繰り返し放射アニメーション</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="script.js" type="text/javascript" defer></script>
+    <style class="editable"></style>
+</head>
+<body>
+    <section class="positioning preview"></section>
+    <textarea class="positioning playable playable-html" style="height: 100px;">
+<h2>繰り返し放射アニメーション</h2>
+
+<div class="box"></div>
+</textarea>
+    <textarea class="positioning playable playable-css" style="height: 160px;">
+section.preview {
+    background-color: #000;
+}
+
+h2 {
+    color: #fff;
+}
+
+div.box {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+div.box::before {
+    content: "";
+    position: absolute;
+    inset: -25%;
+    background: repeating-radial-gradient(circle, #06d 20px, #0f8 60px);
+    animation: scale 10s infinite linear;
+}
+
+@keyframes scale {
+    0% { transform: scale(1); }
+    25% { transform: scale(1.2); }
+    50% { transform: scale(1.5); }
+    75% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+</textarea>
+    <div class="positioning playable-buttons">
+        <input type="button" id="reset" value="リセット" />
+    </div>
+</body>
+</html>
