@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>扇形アニメーション</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="script.js" type="text/javascript" defer></script>
+    <style class="editable"></style>
+</head>
+<body>
+    <section class="positioning preview"></section>
+    <textarea class="positioning playable playable-html" style="height: 100px;">
+<h2>扇形アニメーション</h2>
+
+<div class="box"></div>
+<button>アニメーションを再生</button>
+</textarea>
+    <textarea class="positioning playable playable-css" style="height: 160px;">
+div.box {
+    position: relative;
+    overflow: hidden;
+}
+
+div.box::before {
+    content: "";
+    position: absolute;
+    inset: -25%;
+    background: repeating-conic-gradient(
+                    #000 0deg,
+                    #1a1 50deg,
+                    #000 55deg,
+                    #000
+                );
+}
+
+div.box.rotation::before {
+    animation: rotation 5s infinite linear;
+}
+
+@keyframes rotation {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+</textarea>
+    <textarea class="positioning playable playable-js" style="height: 160px;">
+const box = document.querySelector("div.box");
+const button = document.querySelector("button");
+
+button.addEventListener("click", () => {
+    if (button.innerHTML === "アニメーションを再生") {
+        box.classList.add("rotation");
+        button.innerHTML = "アニメーションを停止";
+    } else {
+        box.classList.remove("rotation");
+        button.innerHTML = "アニメーションを再生";
+    }
+});
+</textarea>
+    <div class="positioning playable-buttons">
+        <input type="button" id="reset" value="リセット" />
+    </div>
+</body>
+</html>

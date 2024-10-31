@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>線形アニメーション</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="script.js" type="text/javascript" defer></script>
+    <style class="editable"></style>
+</head>
+<body>
+    <section class="positioning preview"></section>
+    <textarea class="positioning playable playable-html" style="height: 100px;">
+<h2>線形アニメーション</h2>
+
+<div class="box"></div>
+<button>アニメーションを再生</button>
+</textarea>
+    <textarea class="positioning playable playable-css" style="height: 160px;">
+div.box {
+    background: linear-gradient(
+                    315deg,
+                    #088 20px,
+                    #0ac 50px
+                );
+    background-size: 50px 50px;
+}
+
+div.box.tile {
+    animation: tile 1s infinite linear;
+}
+
+@keyframes tile {
+    from { background-position-x: 0; }
+    to { background-position-x: 50px; }
+}
+</textarea>
+    <textarea class="positioning playable playable-js" style="height: 160px;">
+const box = document.querySelector("div.box");
+const buttton = document.querySelector("button");
+
+buttton.addEventListener("click", () => {
+    if (buttton.innerHTML === "アニメーションを再生") {
+        box.classList.add("tile");
+        buttton.innerHTML = "アニメーションを停止";
+    } else {
+        box.classList.remove("tile");
+        buttton.innerHTML = "アニメーションを再生";
+    }
+});
+</textarea>
+    <div class="positioning playable-buttons">
+        <input type="button" id="reset" value="リセット" />
+    </div>
+</body>
+</html>

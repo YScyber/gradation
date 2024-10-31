@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>線形グラデーション</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="script.js" type="text/javascript" defer></script>
+    <style class="editable"></style>
+</head>
+<body>
+    <section class="positioning preview"></section>
+    <textarea class="positioning playable playable-html" style="height: 100px;">
+<h2>線形グラデーション</h2>
+
+<div class="box"></div>
+</textarea>
+    <textarea class="positioning playable playable-css" style="height: 160px;">
+div.box {
+    background: linear-gradient(
+                    315deg,
+                    #111 38%,
+                    #555 40%,
+                    #444 45%,
+                    #cc4 55%,
+                    #110 58%
+                );
+}
+</textarea>
+    <div class="positioning playable-buttons">
+        <input type="button" id="reset" value="リセット" />
+    </div>
+</body>
+</html>

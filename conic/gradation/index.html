@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>扇形グラデーション</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="script.js" type="text/javascript" defer></script>
+    <style class="editable"></style>
+</head>
+<body>
+    <section class="positioning preview"></section>
+    <textarea class="positioning playable playable-html" style="height: 100px;">
+<h2>扇形グラデーション</h2>
+
+<div class="box"></div>
+</textarea>
+    <textarea class="positioning playable playable-css" style="height: 160px;">
+div.box {
+    background: conic-gradient(
+                    #070 0.25turn,
+                    #004 0.25turn 0.5turn,
+                    #070 0.5turn 0.75turn,
+                    #004 0.75turn
+                );
+    background-size: 50px 50px;
+}
+</textarea>
+    <div class="positioning playable-buttons">
+        <input type="button" id="reset" value="リセット" />
+    </div>
+</body>
+</html>
