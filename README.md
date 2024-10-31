@@ -73,10 +73,10 @@ const button = document.querySelector("button"); // button要素を取得
 
 button.addEventListener("click", () => { // button要素をクリック
     if (button.innerHTML === "アニメーションを再生") { // button要素のinnerHTMLプロパティの値が"アニメーションを再生"だった場合
-        box.classList.add("クラス名"); // div.box要素にクラス名を付与（".tile"、".scale"、".rotation"）
+        box.classList.add("クラス名"); // div.box要素にクラス名を付与（"tile"、"scale"、"rotation"）
         button.innerHTML = "アニメーションを停止"; // button要素のinnerHTMLプロパティの値が"アニメーションを停止"に変更
     } else { // button要素をもう一度クリックしたら
-        box.classList.remove("クラス名"); // div.box要素に付与したクラス名を削除（".tile"、".scale"、".rotation"）
+        box.classList.remove("クラス名"); // div.box要素に付与したクラス名を削除（"tile"、"scale"、"rotation"）
         button.innerHTML = "アニメーションを再生"; // button要素のinnerHTMLプロパティの値が"アニメーションを再生"に戻る
     }
 });
