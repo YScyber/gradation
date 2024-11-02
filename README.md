@@ -89,14 +89,7 @@ button.addEventListener("click", () => { // button要素をクリック
 
 ```css
 div.box {
-    background: linear-gradient(
-                    315deg,
-                    #111 38%,
-                    #555 40%,
-                    #444 45%,
-                    #cc4 55%,
-                    #110 58%
-                );              
+    background: linear-gradient(315deg, #111 38%, #555 40%, #444 45%, #cc4 55%, #110 58%);
 }
 ```
 
@@ -106,11 +99,7 @@ div.box {
 
 ```css
 div.box {
-    background: repeating-linear-gradient(
-                    315deg,
-                    #222 15%,
-                    #0c0 38%
-                );
+    background: repeating-linear-gradient(315deg, #222 15%, #0c0 38%);
 }
 ```
 
@@ -120,11 +109,7 @@ div.box {
 
 ```css
 div.box {
-    background: linear-gradient(
-                    315deg,
-                    #088 20px,
-                    #0ac 50px
-                );
+    background: linear-gradient(315deg, #088 20px, #0ac 50px);
     background-size: 50px 50px;
 }
 ```
@@ -149,12 +134,7 @@ div.box.tile {
 
 ```css
 div.box {
-    background: radial-gradient(
-                    circle at center,
-                    #000 10%,
-                    #b79 12%,
-                    #000
-                );
+    background: radial-gradient(circle at center, #000 10%, #b79 12%, #000);
 }
 ```
 
@@ -164,11 +144,7 @@ div.box {
 
 ```css
 div.box {
-    background: repeating-radial-gradient(
-                    circle at bottom left,
-                    #400,
-                    #00a 20%
-                );
+    background: repeating-radial-gradient(circle at bottom left, #400, #00a 20%);
 }
 ```
 
@@ -186,13 +162,7 @@ div.box::before {
     content: "";
     position: absolute;
     inset: -25%;
-    background: radial-gradient(
-                    circle at center,
-                    #19c,
-                    #3dc 14%,
-                    #000 15%
-                );
-    
+    background: radial-gradient(circle at center, #19c, #3dc 14%, #000 15%);
 }
 ```
 
@@ -217,12 +187,7 @@ div.box.scale::before {
 
 ```css
 div.box {
-    background: conic-gradient(
-                    #070 0.25turn,
-                    #004 0.25turn 0.5turn,
-                    #070 0.5turn 0.75turn,
-                    #004 0.75turn
-                );
+    background: conic-gradient(#070 0.25turn, #004 0.25turn 0.5turn, #070 0.5turn 0.75turn, #004 0.75turn);
     background-size: 50px 50px;
 }
 ```
@@ -233,10 +198,7 @@ div.box {
 
 ```css
 div.box {
-    background: repeating-conic-gradient(
-                    #089 30deg,
-                    #025 60deg
-                );
+    background: repeating-conic-gradient(#089 30deg, #025 60deg);
 }
 ```
 
@@ -254,12 +216,7 @@ div.box::before {
     content: "";
     position: absolute;
     inset: -25%;
-    background: conic-gradient(
-                    #000 0deg,
-                    #1a1 50deg,
-                    #000 55deg,
-                    #000
-                );
+    background: conic-gradient(#000 0deg, #1a1 50deg, #000 55deg, #000);
 }
 ```
 
@@ -296,12 +253,7 @@ div.box {
 
 ```css
 div.box {
-    background: radial-gradient(
-                    ellipse at center,
-                    transparent 40%,
-                    #fff
-                ),
-                url("images/beach.jpg");
+    background: radial-gradient(ellipse at center, transparent 40%, #fff), url("images/beach.jpg");
 }
 ```
 <br>
