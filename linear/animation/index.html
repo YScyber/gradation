@@ -17,12 +17,12 @@
 <button>アニメーションを再生</button>
 </textarea>
     <textarea class="positioning playable playable-css" style="height: 160px;">
-div.box {
+section.preview div.box {
     background: linear-gradient(315deg, #088 20px, #0ac 50px);
     background-size: 50px 50px;
 }
 
-div.box.tile {
+section.preview div.box.tile {
     animation: tile 1s infinite linear;
 }
 
@@ -32,7 +32,7 @@ div.box.tile {
 }
 </textarea>
     <textarea class="positioning playable playable-js" style="height: 160px;">
-const box = document.querySelector("div.box");
+const box = document.querySelector("section.preview div.box");
 const buttton = document.querySelector("button");
 
 buttton.addEventListener("click", () => {
