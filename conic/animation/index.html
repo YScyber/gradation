@@ -17,19 +17,19 @@
 <button>アニメーションを再生</button>
 </textarea>
     <textarea class="positioning playable playable-css" style="height: 160px;">
-div.box {
+section.preview div.box {
     position: relative;
     overflow: hidden;
 }
 
-div.box::before {
+section.preview div.box::before {
     content: "";
     position: absolute;
     inset: -25%;
     background: conic-gradient(#000 0deg, #1a1 50deg, #000 55deg, #000);
 }
 
-div.box.rotation::before {
+section.preview div.box.rotation::before {
     animation: rotation 5s infinite linear;
 }
 
@@ -39,7 +39,7 @@ div.box.rotation::before {
 }
 </textarea>
     <textarea class="positioning playable playable-js" style="height: 160px;">
-const box = document.querySelector("div.box");
+const box = document.querySelector("section.preview div.box");
 const button = document.querySelector("button");
 
 button.addEventListener("click", () => {
