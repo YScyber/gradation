@@ -57,6 +57,7 @@ section.preview button {
     display: block;
     margin: 20px auto 0;
     padding: 0.2em 1em;
+    font-family: inherit;
     font-size: 100%;
 }
 ```
