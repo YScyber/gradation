@@ -12,31 +12,20 @@ body {
     box-sizing: border-box;
 }
 
-.positioning {
+.align {
     margin: 20px auto;
     width: 90%;
     max-width: 980px;
 }
 
-section.preview {
+section {
     padding: 10px;
     border: 1px solid #333;
-    background-color: #000;
 }
 
-section.preview h2 {
-    color: #fff;
-}
-
-section.preview div.box {
-    margin: 0 auto;
-    border-radius: 1em;
-}
-
-textarea.playable {
+textarea {
     display: block;
     padding: 10px 10px 0px;
-    min-height: 130px;
     border: none;
     border-left: 6px solid #5ab;
     background-color: #f4f4f4;
@@ -44,6 +33,9 @@ textarea.playable {
     font-weight: bold;
     font-size: 120%;
 }
+
+textarea.playable-html { min-height: 80px; }
+textarea.playable-css { min-height: 130px; }
 
 div.playable-buttons {
     display: flex;
@@ -54,4 +46,25 @@ div.playable-buttons input[type="button"] {
     margin: 10px;
     font-family: inherit;
     font-size: 100%;
+}
+
+/* section要素内のスタイリング */
+section {
+    background-color: #000;
+}
+
+h2 {
+    color: #fff;
+}
+
+div.box {
+    margin: 0 auto;
+    border-radius: 1em;
+}
+
+/* アットルールでフォントサイズを変更 */
+@media screen and (max-width: 699px) {
+    textarea {
+        font-size: 100%;
+    }
 }
