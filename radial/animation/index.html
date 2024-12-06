@@ -9,28 +9,28 @@
     <style class="editable"></style>
 </head>
 <body>
-    <section class="positioning preview"></section>
-    <textarea class="positioning playable playable-html">
+    <section class="align"></section>
+    <textarea class="align playable-html">
 <h2>放射アニメーション</h2>
 
 <div class="box"></div>
 
 <button>アニメーションを再生</button>
 </textarea>
-    <textarea class="positioning playable playable-css">
-section.preview div.box {
+    <textarea class="align playable-css">
+div.box {
     position: relative;
     overflow: hidden;
 }
 
-section.preview div.box::before {
+div.box::before {
     content: "";
     position: absolute;
     inset: -25%;
     background: radial-gradient(circle at center, #19c, #3dc 14%, #000 15%);
 }
 
-section.preview div.box.scale::before {
+div.box.scale::before {
     animation: scale 3s infinite linear;
 }
 
@@ -40,8 +40,8 @@ section.preview div.box.scale::before {
     100% { transform: scale(1); }
 }
 </textarea>
-    <textarea class="positioning playable playable-js">
-const box = document.querySelector("section.preview div.box");
+    <textarea class="align playable-js">
+const box = document.querySelector("div.box");
 const button = document.querySelector("button");
 
 button.addEventListener("click", () => {
@@ -54,7 +54,7 @@ button.addEventListener("click", () => {
     }
 });
 </textarea>
-    <div class="positioning playable-buttons">
+    <div class="align playable-buttons">
         <input type="button" id="reset" value="リセット" />
     </div>
 </body>
