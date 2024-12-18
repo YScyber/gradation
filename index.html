@@ -5,22 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>グラデーション</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="script.js" type="text/javascript" defer></script>
 </head>
 <body>
     <header>
         <h1>グラデーション</h1>
+        <select>
+            <option value="">選択してください</option>
+            <optgroup label="線形">
+                <option value="linear/gradation/index.html">グラデーション</option>
+                <option value="linear/repeat/index.html">繰り返しグラデーション</option>
+                <option value="linear/animation/index.html">アニメーション</option>
+            </optgroup>
+            <optgroup label="放射">
+                <option value="radial/gradation/index.html">グラデーション</option>
+                <option value="radial/repeat/index.html">繰り返しグラデーション</option>
+                <option value="radial/animation/index.html">アニメーション</option>
+            </optgroup>
+            <optgroup label="扇形">
+                <option value="conic/gradation/index.html">グラデーション</option>
+                <option value="conic/repeat/index.html">繰り返しグラデーション</option>
+                <option value="conic/animation/index.html">アニメーション</option>
+            </optgroup>
+            <optgroup label="画像">
+                <option value="image/index.html">グラデーション</option>
+            </optgroup>
+        </select>
     </header>
-    <div class="wrapper">
-        <iframe src="linear/gradation/index.html" title="線形グラデーションのデモファイル" width="980" height="700" frameborder="0"></iframe>
-        <iframe src="linear/repeat/index.html" title="繰り返し線形グラデーションのデモファイル" width="980" height="700" frameborder="0"></iframe>
-        <iframe src="linear/animation/index.html" title="線形アニメーションのデモファイル" width="980" height="1150" frameborder="0"></iframe>
-        <iframe src="radial/gradation/index.html" title="放射グラデーションのデモファイル" width="980" height="700" frameborder="0"></iframe>
-        <iframe src="radial/repeat/index.html" title="繰り返し放射グラデーションのデモファイル" width="980" height="700" frameborder="0"></iframe>
-        <iframe src="radial/animation/index.html" title="放射アニメーションのデモファイル" width="980" height="1300" frameborder="0"></iframe>
-        <iframe src="conic/gradation/index.html" title="扇形グラデーションのデモファイル" width="980" height="700" frameborder="0"></iframe>
-        <iframe src="conic/repeat/index.html" title="繰り返し扇形グラデーションのデモファイル" width="980" height="700" frameborder="0"></iframe>
-        <iframe src="conic/animation/index.html" title="扇形アニメーションのデモファイル" width="980" height="1300" frameborder="0"></iframe>
-        <iframe src="image/index.html" title="画像とグラデーションのデモファイル" width="980" height="850" frameborder="0"></iframe>
-    </div>
+    <iframe width="980" height="500" frameborder="0"></iframe>
 </body>
 </html>
