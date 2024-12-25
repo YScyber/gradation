@@ -118,7 +118,6 @@ div.box {
     background: linear-gradient(315deg, #111 38%, #555 40%, #444 45%, #cc4 55%, #110 58%);
 }
 ```
-<br>
 
 [ソースコードの参照ページへ](linear/gradation/index.html "linear/gradation/index.html")
 <br>
@@ -132,7 +131,6 @@ div.box {
     background: repeating-linear-gradient(315deg, #222 15%, #0c0 38%);
 }
 ```
-<br>
 
 [ソースコードの参照ページへ](linear/repeat/index.html "linear/repeat/index.html")
 <br>
@@ -160,7 +158,6 @@ div.box.tile {
     to { background-position-x: 50px; }
 }
 ```
-<br>
 
 [ソースコードの参照ページへ](linear/animation/index.html "linear/animation/index.html")
 <br>
@@ -176,7 +173,6 @@ div.box {
     background: radial-gradient(circle at center, #000 10%, #b79 12%, #000);
 }
 ```
-<br>
 
 [ソースコードの参照ページへ](radial/gradation/index.html "radial/gradation/index.html")
 <br>
@@ -190,7 +186,6 @@ div.box {
     background: repeating-radial-gradient(circle at bottom left, #400, #00a 20%);
 }
 ```
-<br>
 
 [ソースコードの参照ページへ](radial/repeat/index.html "radial/repeat/index.html")
 <br>
@@ -226,7 +221,6 @@ div.box.scale::before {
     100% { transform: scale(1); }
 }
 ```
-<br>
 
 [ソースコードの参照ページへ](radial/animation/index.html "radial/animation/index.html")
 <br>
@@ -243,7 +237,6 @@ div.box {
     background-size: 50px 50px;
 }
 ```
-<br>
 
 [ソースコードの参照ページへ](conic/gradation/index.html "conic/gradation/index.html")
 <br>
@@ -257,7 +250,6 @@ div.box {
     background: repeating-conic-gradient(#089 30deg, #025 60deg);
 }
 ```
-<br>
 
 [ソースコードの参照ページへ](conic/repeat/index.html "conic/repeat/index.html")
 <br>
@@ -292,7 +284,6 @@ div.box.rotation::before {
     to { transform: rotate(360deg); }
 }
 ```
-<br>
 
 [ソースコードの参照ページへ](conic/animation/index.html "conic/animation/index.html")
 <br>
@@ -321,7 +312,6 @@ div.box {
     background: radial-gradient(ellipse at center, transparent 40%, #fff), url("images/beach.jpg");
 }
 ```
-<br>
 
 [ソースコードの参照ページへ](image/index.html "image/index.html")
 <br>
