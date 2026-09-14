@@ -166,7 +166,7 @@ div.box.rotation::before {
 
 <img src="images/beach.jpg/" alt="ビーチの画像" width="120" height="160" />
 
-上記にある共通設定を画像のサイズに合わせて幅を`240px`、高さを`320px`に変更しています。
+画像のサイズは幅を`240px`、高さを`320px`にしています。
 
 ```css
 div.image {
