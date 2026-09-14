@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>グラデーション</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <style>
+        /* 線形グラデーション */
+        div.linear-gradation {
+            background: linear-gradient(315deg, #111 38%, #555 40%, #444 45%, #cc4 55%, #110 58%);
+        }
+
+        div.linear-repeat {
+            background: repeating-linear-gradient(315deg, #222 15%, #0c0 38%);
+        }
+
+        div.linear-animation {
+            background: linear-gradient(315deg, #088 20px, #0ac 50px);
+            background-size: 50px 50px;
+        }
+
+        div.linear-animation.tile {
+            animation: tile 3s infinite linear;
+        }
+
+        @keyframes tile {
+            from { background-position-x: 0; }
+            to { background-position-x: 50px; }
+        }
+
+        /* 放射グラデーション */
+        div.radial-gradation {
+            background: radial-gradient(circle at center, #000 10%, #b79 12%, #000);
+        }
+
+        div.radial-repeat {
+            background: repeating-radial-gradient(circle at bottom left, #400, #00a 20%);
+        }
+
+        div.radial-animation {
+            position: relative;
+            overflow: hidden;
+        }
+
+        div.radial-animation::before {
+            content: "";
+            position: absolute;
+            inset: -25%;
+            background: radial-gradient(circle at center, #19c, #3dc 14%, #000 15%);
+        }
+
+        div.radial-animation.scale::before {
+            animation: scale 7s infinite linear;
+        }
+
+        @keyframes scale {
+            0% { transform: scale(1); }
+            50% { transform: scale(0.5); }
+            100% { transform: scale(1); }
+        }
+
+        /* 扇形グラデーション */
+        div.conic-gradation {
+            background: conic-gradient(#070 0.25turn, #004 0.25turn 0.5turn, #070 0.5turn 0.75turn, #004 0.75turn);
+            background-size: 50px 50px;
+        }
+
+        div.conic-repeat {
+            background: repeating-conic-gradient(#089 30deg, #025 60deg);
+        }
+
+        div.conic-animation {
+            position: relative;
+            overflow: hidden;
+        }
+
+        div.conic-animation::before {
+            content: "";
+            position: absolute;
+            inset: -25%;
+            background: conic-gradient(#000 0deg, #1a1 50deg, #000 55deg, #000);
+        }
+
+        div.conic-animation.rotation::before {
+            animation: rotation 10s infinite linear;
+        }
+
+        @keyframes rotation {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* 画像 */
+        div.image {
+            width: 240px;
+            height: 320px;
+            background: radial-gradient(ellipse at center, transparent 40%, #fff), url("images/beach.jpg");
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>グラデーション</h1>
+    </header>
+    <div id="linear">
+        <h2>線形グラデーション</h2>
+        <div class="grid">
+            <div class="box linear-gradation"></div>
+            <div class="box linear-repeat"></div>
+            <div class="box linear-animation tile"></div>
+        </div>
+    </div>
+    <div id="radial">
+        <h2>放射グラデーション</h2>
+        <div class="grid">
+            <div class="box radial-gradation"></div>
+            <div class="box radial-repeat"></div>
+            <div class="box radial-animation scale"></div>
+        </div>
+    </div>
+    <div id="conic">
+        <h2>扇形グラデーション</h2>
+        <div class="grid">
+            <div class="box conic-gradation"></div>
+            <div class="box conic-repeat"></div>
+            <div class="box conic-animation rotation"></div>
+        </div>
+    </div>
+    <div id="image">
+        <h2>画像</h2>
+        <div class="image"></div>
+    </div>
+</body>
+</html>
